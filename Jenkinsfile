@@ -16,18 +16,18 @@ pipeline {
             }
         }
 
-        stage('SonarQube Analysis') {
-            steps {
-                script {
-                    echo 'Performing SonarQube analysis...'
-                    // Ensure SonarQube Scanner is installed and configured in Jenkins
-                    withSonarQubeEnv(SONARQUBE_SERVER) {
-                        // Run SonarQube analysis (adjust according to your setup)
-                        sh 'mvn sonar:sonar -Dsonar.projectKey=your_project_key'
-                    }
-                }
-            }
-        }
+        // stage('SonarQube Analysis') 
+        //     steps {
+        //         script {
+        //             echo 'Performing SonarQube analysis...'
+        //             // Ensure SonarQube Scanner is installed and configured in Jenkins
+        //             withSonarQubeEnv(SONARQUBE_SERVER) {
+        //                 // Run SonarQube analysis (adjust according to your setup)
+        //                 sh 'mvn sonar:sonar -Dsonar.projectKey=your_project_key'
+        //             }
+        //         }
+        //     }
+        // }
 
         stage('Slack Notification') {
             steps {
