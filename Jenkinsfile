@@ -29,16 +29,16 @@ pipeline {
         //     }
         // }
 
-    //     stage('Slack Notification') {
-    //         steps {
-    //             script {
-    //                 echo 'Sending Slack notification...'
-    //                 // Send notification to Slack (ensure Slack plugin is configured)
-    //                 slackSend channel: SLACK_CHANNEL, message: 'Build completed successfully!'
-    //             }
-    //         }
-    //     }
-    // }
+        // stage('Slack Notification') {
+        //     steps {
+        //         script {
+        //             echo 'Sending Slack notification...'
+        //             // Send notification to Slack (ensure Slack plugin is configured)
+        //             slackSend channel: SLACK_CHANNEL, message: 'Build completed successfully!'
+        //         }
+        //     }
+        // }
+    }
 
     post {
         success {
